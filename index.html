@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>你好啊成语</title>
+    <title>旋转相册</title>
     <style>
         @keyframes rotating {
             0% {
@@ -99,13 +99,16 @@
     </div>
 </div>
 <section id="media">
-			<audio controls autoplay="autoplay">
-				<source src="mp3/dangni.mp3"  >
-				您的浏览器不支持 audio 元素。
-			</audio>
-		</section>
+	<audio controls autoplay="autoplay" src="mp3/dangni.mp3" id="mp3">
+	</audio>
+</section>
 <script>
-	
+	window.onload = ()=>{
+		let mp3 = document.getElementById('mp3');
+		if(mp3.paused){
+			mp3.play();
+		}
+	}
 </script>
 </body>
 </html>
