@@ -1,114 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>你好啊成语</title>
-    <style>
-        @keyframes rotating {
-            0% {
-                transform: rotateY(0deg);
-            }
-            100% {
-                transform: rotateY(360deg);
-            }
-        }
-        html, body {
-            height: 100%;
-            margin: 0;
-			background-image: url(img/img9.jpg);
-        }
-		
-		#media{
-			text-align: center;
-		}
-        .stage-area {
-            perspective: 800px;
-            min-height: 100%;
-            perspective-origin: center -10%;
-        }
-        .container {
-            transform-style: preserve-3d;
-            width: 160px;
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            margin-top: -80px;
-            margin-left: -80px;
-            animation-name: rotating;
-            animation-duration: 30s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-        }
-        .container:hover {
-            animation-play-state: paused;
-        }
-        .container img {
-			width: 140px;
-			height: 240px;
-			border-radius: 1rem;
-            border: 3px solid rgba(255, 255, 255, .5);
-        }
-        img {
-            max-width: 100%;
-            position: absolute;
-        }
-        .container a:nth-child(1) img {
-            transform: rotateY(0deg) translateZ(250px);
-        }
-        .container a:nth-child(2) img {
-            transform: rotateY(40deg) translateZ(250px);
-        }
-        .container a:nth-child(3) img {
-            transform: rotateY(80deg) translateZ(250px);
-        }
-        .container a:nth-child(4) img {
-            transform: rotateY(120deg) translateZ(250px);
-        }
-        .container a:nth-child(5) img {
-            transform: rotateY(160deg) translateZ(250px);
-        }
-        .container a:nth-child(6) img {
-            transform: rotateY(200deg) translateZ(250px);
-        }
-        .container a:nth-child(7) img {
-            transform: rotateY(240deg) translateZ(250px);
-        }
-        .container a:nth-child(8) img {
-            transform: rotateY(280deg) translateZ(250px);
-        }
-        .container a:nth-child(9) img {
-            transform: rotateY(320deg) translateZ(250px);
-        }
-        body > img:not(:target) {
-            z-index: -1;
-        }
-    </style>
-</head>
-<body>
-<div class="stage-area">
-    <div class="container">
-        <a href="#t1"><img src="img/jj1.jpg" /></a>
-        <a href="#t2"><img src="img/jj2.jpg" /></a>
-        <a href="#t3"><img src="img/jj3.jpeg" /></a>
-        <a href="#t4"><img src="img/jj4.jpg" /></a>
-        <a href="#t5"><img src="img/jj5.png" /></a>
-        <a href="#t6"><img src="img/jj6.jpeg" /></a>
-        <a href="#t7"><img src="img/jj7.jpg" /></a>
-        <a href="#t8"><img src="img/jj8.jpg" /></a>
-		<a href="#t9"><img src="img/jj9.jpg" /></a>
-    </div>
-</div>
-<section id="media">
-	<audio controls preload:auto autoplay="autoplay" src="mp3/dangni.mp3" id="mp3">
-	</audio>
-</section>
-<script>
-	window.onload = ()=>{
-		let mp3 = document.getElementById('mp3');
-		if(mp3.paused){
-			mp3.play();
-		}
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+
+<style type="text/css">
+	@font-face {
+		font-family: digit;
+		src: url('digital-7_mono.ttf') format("truetype");
 	}
+	body {
+		background-color: #FFFFCC;
+		/*background-image: url(img9.jpg);*/
+	}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code" style="margin-top: 80px">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*2019—03-07,</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			Boy name = <span class="keyword">Mr</span> LI<br />
+			Girl name = <span class="keyword">Mrs</span> SONG<br />
+			<span class="comments">// 坠入爱河. </span><br />
+			男孩很爱女孩;<br />
+			女孩也很爱男孩;<br />
+			<span class="comments">// 愿得一人,白头不相离.</span><br />
+			男孩不会离开女孩;<br />
+			女孩也不会离开男孩;<br />
+			<span class="comments">// 只愿君心似我心,定不负相思意.</span><br />
+			<span class="keyword">总有些惊奇的际遇</span>;<br />
+			<span class="keyword">比方说当我遇见你;<br />
+            <span class="comments">// 山无陵，江水为竭.</span><br />
+            <span class="comments">// 冬雷震震，夏雨雪.</span><br />
+            <span class="comments">// 天地合，乃敢与君绝.</span><br />
+            <br>
+            <br>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					这是我们在一起的时光。
+					<div id="elapseClock"></div>
+				</div>
+			</div>
+		</div>
+		<div style="display: none">
+			<audio controls preload:auto autoplay="autoplay" src="mp3/dangni.mp3" id="mp3">
+			</audio>
+		</div>
+
+		<script>
+			window.onload = ()=>{
+				let mp3 = document.getElementById('mp3');
+				if(mp3.paused){
+					mp3.play();
+				}
+			}
+		</script>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2019, 2, 7);
+together.setHours(1);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
 </script>
+
 </body>
 </html>
